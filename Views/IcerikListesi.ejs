@@ -1,0 +1,100 @@
+<html>
+    <body onload="addRowMR()"> <!--sayfa yuklenirken cagırılıyor.-->
+    
+    <head>
+        <title>Icerik Listesi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/App_Server/public/CSS/table.css">
+        <script type="text/javascript" src="IcerikListesi.js"></script>
+    </head>
+    
+<br></br>
+<body>
+        <div><b>Akademik Dergi Yönetim Sistemi</b></div>
+        <ul>
+  <li><a class="active" href="/atama/MakaleAtama">Makale Atama</a></li>
+  <li><a href="/atama/MakaleAtamaList">Makaleler</a></li>
+  <li><a href="/registerList">Uye Islemleri</a></li>
+  <li><a href="Yoneticiler.html">Yonetici Islemleri</a></li>
+  <li><a href="atama/MakaleAtamaList">Icerik Yonetimi</a></li>
+  <li><a href="MakaleRaporlari.html">Makale Raporları</a></li>
+</ul>
+
+    </body>
+    
+<table id="icerikTable"  border="1" cellpadding="5">
+    
+    
+    <tr>
+        <h1>IÇERIK LISTESI</h1>
+    </tr>
+    <br></br>
+   
+    <label for="alani"><b>Alanı</b></label>
+         <input type="text" id="depertment" name="depertment" placeholder="Alanı">
+     
+         <br></br>
+         <br></br>
+   
+    <label for="category"><b>Kategori</b></label>
+         <input type="text" id="categori" name="categori" placeholder="Kategori">
+     
+         <br></br>
+<br></br>
+   
+    <label for="date"><b>Tarih</b></label>
+         <input type="text" id="date" name="date" placeholder="Tarih">
+     
+         <br></br>
+         <br></br>
+   
+    <label for="slaytadd"><b>Slayt Ekle</b></label>
+         <input type="text" id="slaytadd" name="slaytadd" placeholder="Slayt Ekle">
+     
+         <br></br>
+         <label>Aranacak Kelime</label>
+<input type="search" name="search"  placeholder="Search..">
+ <br></br>
+    <tr>
+        <th>&nbsp;</th>
+        <th><b>Duzenle</b></th>
+        <th><b>No</b></th>
+        <th><b>Bolum</b></th>
+        <th><b>Kategori</b></th>
+        <th><b>Baslik</b></th>
+        <th><b>Tarih</b></th>
+        <th><b>Uygulama</b></th>
+        
+    </tr>
+</thead>
+<thead>
+<tbody>
+
+<%for(var i=0; i<makaleAtama.length; i++){%>
+<%if(i%2==0){%>
+<tr class="info">
+<%}else{%>
+<tr class="warning">
+<%}%>
+<tr>
+<th><%=i+1%></th>
+<th><%=makaleAtama[i].atanan%></th>
+<th><%=makaleAtama[i].alani%></th>
+<th><%=makaleAtama[i].altAlani%></th>
+<th><%=makaleAtama[i].adSoyad%></th>
+<th>aktif</th>
+<th>ONAYLANDI</th>
+<th><%=makaleAtama[i].not%></th>
+<th><%=makaleAtama[i].makaleFolder%></th>
+</tr>
+    
+    
+<%}%>
+
+</tbody>
+</table>
+
+</thead>
+</thead>
+</table>

@@ -1,0 +1,69 @@
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/App_Server/public/CSS/table.css">
+        <script type="text/javascript" src="MakaleRapor.js"></script>
+     
+   
+    </head>
+    <body>
+        <div><b>Akademik Dergi Yönetim Sistemi</b></div>
+        <ul>
+  <li><a class="active" href="/atama/MakaleAtama">Makale Atama</a></li>
+  <li><a href="/atama/MakaleAtamaList">Makaleler</a></li>
+  <li><a href="/registerList">Uye Islemleri</a></li>
+  <li><a href="Yoneticiler.html">Yonetici Islemleri</a></li>
+  <li><a href="atama/MakaleAtamaList">Icerik Yonetimi</a></li>
+  <li><a href="MakaleRaporlari.html">Makale Raporları</a></li>
+</ul>
+    </body>
+   
+        <div class="container">
+<table class="table">
+<thead>
+<tr>
+<th>No</th>
+<th>TARIH</th>
+<th>MAK.NO</th>
+<th>ALANI</th>
+<th>ADI SOYADI</th>
+<th>DURUMU</th>
+<th>BASLIK</th>
+<th>NOT</th>
+<th>RAPOR</th>
+<th>SONUC</th>
+</tr>
+<thead>
+<tbody>
+
+<%for(var i=0; i<makaleAtama.length; i++){%>
+<%if(i%2==0){%>
+<tr class="info">
+<%}else{%>
+<tr class="warning">
+<%}%>
+<tr>
+<th><%=i+1%></th>
+<th>16.12.18</th>
+<th><%=i+4%></th>
+<th><%=makaleAtama[i].alani%></th>
+<th><%=makaleAtama[i].adSoyad%></th>
+<th><%=makaleAtama[i].atanan%></th>
+<th><%=makaleAtama[i].altAlani%></th>
+<th><%=makaleAtama[i].not%></th>
+<th><%=makaleAtama[i].makaleFolder%></th>
+<th>ONAYLANDI</th>
+</tr>
+    
+    
+<%}%>
+
+
+</tbody>
+</table>
+
+</thead>
+</thead>
+

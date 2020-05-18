@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="Yoneticiler.js"></script>
+        <link rel="stylesheet" href="/App_Server/public/CSS/table.css">
+    </head>
+    <body>
+        <div><b>Akademik Dergi Yönetim Sistemi</b></div>
+        <ul>
+  <li><a class="active" href="MakaleAtama.html">Makale Atama</a></li>
+  <li><a href="Makaleler.html">Makaleler</a></li>
+  <li><a href="UyeIslemleri.html">Uye Islemleri</a></li>
+  <li><a href="Yoneticiler.html">Yonetici Islemleri</a></li>
+  <li><a href="IcerikListesi.html">Icerik Yonetimi</a></li>
+  <li><a href="MakaleRaporlari.html">Makale Raporları</a></li>
+</ul>
+
+    </body>
+     <label>Aranacak Kelime</label>
+<input type="search" name="search"  placeholder="Search..">
+ <br></br>
+    <div class="panel-body">
+<form action="/Yoneticiler" method="POST">
+<form>
+    <label for="alt_alani"><b>Kullanıcı Adı</b></label>
+        <input type="text" id="Kadi" name="Kadi" placeholder="Kullanicı adı">
+    <br> </br>
+    
+    <label for="adsoyad"><b>Ad Soyad</b></label>
+         <input type="text" id="ad" name="ad" placeholder="Ad Soyad">
+    
+        <input type="button" id="yoneticiekle" value="Yonetici Ekle >">
+    </div>
+</form>
+    <br> </br>
+ 
+<table id="yoneticilerTable"  border="1" cellpadding="5">
+    <tr>
+        <th>&nbsp;</th>
+        <th><b>ID</b></th>
+        <th><b>KULLANICI ADI</b></th>
+        <th><b>AD SOYAD</b></th>
+      
+    </tr>
+    <tr>
+     <td></td>  
+    <td>2</td>
+    <td>btldonmez</td>
+    </tr>
+     <tr>
+     <td></td>  
+    <td>1</td>
+    <td>elfaybke</td>
+    <td>Elif Aybike ASLAN</td>
+    </tr>
+</table>
+&nbsp;<br/>
+
+
+
+

@@ -1,0 +1,75 @@
+
+
+    <head>
+        
+        <title>TODO supply a title</title>
+        <link rel="stylesheet" href="/App_Server/public/CSS/table.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+    </head>
+   
+  
+        <div><b>Akademik Dergi Yönetim Sistemi</b></div>
+        <ul>
+  <li><a class="active" href="MakaleAtama.html">Makale Atama</a></li>
+  <li><a href="Makaleler.html">Makaleler</a></li>
+  <li><a href="UyeIslemleri.html">Uye Islemleri</a></li>
+  <li><a href="Yoneticiler.html">Yonetici Islemleri</a></li>
+  <li><a href="IcerikListesi.html">Icerik Yonetimi</a></li>
+  <li><a href="MakaleRaporlari.html">Makale Raporları</a></li>
+</ul>
+
+<div class="container">
+<table class="table">
+<thead>
+<tr>
+<th>No</th>
+<th>AD</th>
+<th>SOYAD</th>
+<th>KULLANICI ADI</th>
+<th>E-MAIL</th>
+<th>KAYIT TARIHI</th>
+<th>TEL</th>
+<th>GSM</th>
+<th>DURUM</th>
+<th>ISLEMLER</th>
+
+</tr>
+<thead>
+<tbody>
+
+<%for(var i=0; i<User.length; i++){ %>
+<%if(i%2==0){%>
+<tr class="info">
+<%}else{%>
+<tr class="warning">
+<%}%>
+
+<th><%=i+1%></th>
+<th><%=User[i].ad%></th>
+<th><%=User[i].soyad%></th>
+<th><%=User[i].kullaniciAdi%></th>
+<th><%=User[i].mail%></th>
+<th>15.12.18</th>
+<th><%=User[i].tel%></th>
+<th><%=User[i].gsm%></th>
+<th><%=User[i].durum%></th>
+<th><%=User[i].aktarim%></th>
+<th><a href="/recordDelete/<%=User[i].kullaniciAdi%>">sil</a></th> <%#buraya yazdigim sey direkt router'a yonlendiriliyor%>
+
+
+</tr>
+    
+    
+<%}%>
+
+
+</tbody>
+</table>
+
+</thead>
+</thead>
+
+    
+
